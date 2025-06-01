@@ -3,6 +3,71 @@
 <head>
     <meta charset="UTF-8" />
     <title>Simple CI/CD Site</title>
+    <style>
+        /* Сброс отступов и базовые стили */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #121212; /* темно-серый фон */
+            color: #e0e0e0; /* светло-серый текст */
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+            user-select: none;
+        }
+
+        h1 {
+            font-weight: 600;
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            letter-spacing: 0.05em;
+            text-shadow: 0 0 5px rgba(255, 255, 255, 0.15);
+        }
+
+        button {
+            background: linear-gradient(145deg, #2c2c2c, #1a1a1a);
+            border: none;
+            border-radius: 12px;
+            padding: 0.75rem 2rem;
+            color: #e0e0e0;
+            font-size: 1.1rem;
+            cursor: pointer;
+            box-shadow: 4px 4px 8px #0e0e0e,
+                        -4px -4px 8px #3b3b3b;
+            transition: all 0.3s ease;
+            outline-offset: 4px;
+        }
+
+        button:hover, button:focus {
+            background: linear-gradient(145deg, #3a3a3a, #222);
+            box-shadow: 6px 6px 12px #0a0a0a,
+                        -6px -6px 12px #444;
+            color: #ffffff;
+            transform: translateY(-3px);
+        }
+
+        button:active {
+            transform: translateY(1px);
+            box-shadow: inset 2px 2px 5px #0a0a0a,
+                        inset -2px -2px 5px #444;
+        }
+
+        p#msg {
+            margin-top: 1.5rem;
+            font-size: 1.2rem;
+            color: #b0b0b0;
+            min-height: 1.4em;
+            transition: color 0.4s ease;
+        }
+    </style>
 </head>
 <body>
     <h1>Hello, CI/CD with GitHub Actions and AWS!</h1>
